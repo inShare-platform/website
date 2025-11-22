@@ -12,7 +12,7 @@
     "subheadline": "Upload, share, analyze, and convert — all from one intuitive platform.",
     "cta": {
       "label": "Upload File",
-      "link": "/dashboard"
+      "link": "https://wa.me/919080122084?text=Hi%2C%20I%20would%20like%20to%20upload%20a%20file%20and%20get%20started%20with%20inShare."
     },
     "supportingText": [
       "Create secure shareable links in seconds.",
@@ -129,7 +129,7 @@
     ],
     "cta": {
       "label": "Create Your First Link",
-      "link": "/dashboard"
+      "link": "https://wa.me/919080122084?text=Hi%2C%20I%20would%20like%20to%20create%20my%20first%20link%20with%20inShare."
     }
   },
   "howItWorks": {
@@ -189,49 +189,56 @@
     "plans": [
       {
         "name": "Lite Plan",
-        "description": "Ideal for individuals; includes basic link creation.",
-        "price": "₹499/month",
+        "description": "Perfect for individuals and small projects.",
+        "price": "₹99/month",
         "features": [
           "Up to 10 URLs",
           "Website & Document Tracking",
-          "Basic Analytics"
+          "Basic Analytics",
+          "Email Support"
         ],
         "cta": {
           "label": "Choose Lite",
-          "link": "/signup?plan=lite"
+          "link": "https://wa.me/919080122084?text=Hi%2C%20May%20I%20know%20about%20your%20Lite%20Plan%20(₹99/month)%3F"
         },
         "popular": false
       },
       {
         "name": "Pro Plan",
-        "description": "Advanced analytics and AI-powered insights.",
-        "price": "₹999/month",
+        "description": "Best value with advanced analytics and AI insights.",
+        "price": "₹499/month",
         "features": [
           "Up to 50 URLs",
           "Lead Capture Forms",
           "Team Collaboration",
           "Advanced Analytics",
-          "AI Insights"
+          "AI Insights",
+          "WhatsApp Integration",
+          "Priority Support"
         ],
         "cta": {
           "label": "Choose Pro",
-          "link": "/signup?plan=pro"
+          "link": "https://wa.me/919080122084?text=Hi%2C%20May%20I%20know%20about%20your%20Pro%20Plan%20(₹499/month)%3F"
         },
         "popular": true
       },
       {
         "name": "Enterprise Plan",
-        "description": "Full features and team management.",
+        "description": "Share it with your own brand and theme.",
         "price": "Custom",
         "features": [
           "Unlimited URLs",
+          "Custom Branding & White Label",
+          "Your Own Domain Integration",
+          "Custom Theme & Colors",
+          "Dedicated Account Manager",
           "Priority Support",
           "Custom Integrations",
-          "Dedicated Account Manager"
+          "API Access"
         ],
         "cta": {
           "label": "Contact Sales",
-          "link": "/contact-sales"
+          "link": "https://wa.me/919080122084?text=Hi%2C%20May%20I%20know%20about%20your%20Enterprise%20Plan%3F"
         },
         "popular": false
       }
@@ -241,7 +248,7 @@
       "description": "Select features, number of URLs, and pay for what you need.",
       "cta": {
         "label": "Create Custom Plan",
-        "link": "/custom-plan"
+        "link": "https://wa.me/919080122084?text=Hi%2C%20I%20would%20like%20to%20create%20a%20custom%20plan%20for%20my%20business."
       }
     }
   },
