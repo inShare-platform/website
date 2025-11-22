@@ -12,7 +12,7 @@
     "subheadline": "Upload, share, analyze, and convert — all from one intuitive platform.",
     "cta": {
       "label": "Upload File",
-      "link": "/dashboard"
+      "link": "https://wa.me/919080122084?text=Hi%2C%20I%20would%20like%20to%20upload%20a%20file%20and%20get%20started%20with%20inShare."
     },
     "supportingText": [
       "Create secure shareable links in seconds.",
@@ -129,7 +129,7 @@
     ],
     "cta": {
       "label": "Create Your First Link",
-      "link": "/dashboard"
+      "link": "https://wa.me/919080122084?text=Hi%2C%20I%20would%20like%20to%20create%20my%20first%20link%20with%20inShare."
     }
   },
   "howItWorks": {
@@ -188,9 +188,9 @@
     "headline": "Choose a Plan That Fits Your Needs",
     "plans": [
       {
-        "name": "Starter Plan",
-        "description": "Perfect for individuals getting started.",
-        "price": "$5/month",
+        "name": "Lite Plan",
+        "description": "Perfect for individuals and small projects.",
+        "price": "₹99/month",
         "features": [
           "Up to 10 URLs",
           "Website & Document Tracking",
@@ -198,42 +198,47 @@
           "Email Support"
         ],
         "cta": {
-          "label": "Choose Starter",
-          "link": "/signup?plan=starter"
+          "label": "Choose Lite",
+          "link": "https://wa.me/919080122084?text=Hi%2C%20May%20I%20know%20about%20your%20Lite%20Plan%20(₹99/month)%3F"
         },
         "popular": false
       },
       {
         "name": "Pro Plan",
-        "description": "Advanced features for growing businesses.",
-        "price": "$10/month",
+        "description": "Best value with advanced analytics and AI insights.",
+        "price": "₹499/month",
         "features": [
-          "Up to 20 URLs",
+          "Up to 50 URLs",
           "Lead Capture Forms",
+          "Team Collaboration",
           "Advanced Analytics",
           "AI Insights",
+          "WhatsApp Integration",
           "Priority Support"
         ],
         "cta": {
           "label": "Choose Pro",
-          "link": "/signup?plan=pro"
+          "link": "https://wa.me/919080122084?text=Hi%2C%20May%20I%20know%20about%20your%20Pro%20Plan%20(₹499/month)%3F"
         },
         "popular": true
       },
       {
         "name": "Enterprise Plan",
-        "description": "Full features and team management.",
+        "description": "Share it with your own brand and theme.",
         "price": "Custom",
         "features": [
           "Unlimited URLs",
-          "Team Collaboration",
-          "Custom Integrations",
+          "Custom Branding & White Label",
+          "Your Own Domain Integration",
+          "Custom Theme & Colors",
           "Dedicated Account Manager",
-          "24/7 Support"
+          "Priority Support",
+          "Custom Integrations",
+          "API Access"
         ],
         "cta": {
           "label": "Contact Sales",
-          "link": "/contact-sales"
+          "link": "https://wa.me/919080122084?text=Hi%2C%20May%20I%20know%20about%20your%20Enterprise%20Plan%3F"
         },
         "popular": false
       }
@@ -243,9 +248,55 @@
       "description": "Select features, number of URLs, and pay for what you need.",
       "cta": {
         "label": "Create Custom Plan",
-        "link": "/custom-plan"
+        "link": "https://wa.me/919080122084?text=Hi%2C%20I%20would%20like%20to%20create%20a%20custom%20plan%20for%20my%20business."
       }
     }
+  },
+  "faq": {
+    "headline": "Frequently Asked Questions",
+    "subheadline": "Everything you need to know about inShare",
+    "questions": [
+      {
+        "question": "What is inShare?",
+        "answer": "inShare is a secure document sharing and analytics platform with branding, follow-ups, AI insights, and CRM features—designed for businesses that want more control than Google Drive or Dropbox offer."
+      },
+      {
+        "question": "How is inShare different from Google Drive or Dropbox?",
+        "answer": "Unlike traditional storage tools, inShare provides view tracking, link analytics, branding with your domain, automatic follow-ups, and web intelligence without scripts—features that Drive/Dropbox don't offer."
+      },
+      {
+        "question": "Does inShare show who viewed my document?",
+        "answer": "Yes. You can see view count, unique visitors, IP and location, device and browser, and precise view timestamps for each document."
+      },
+      {
+        "question": "Can I add my own domain?",
+        "answer": "Yes. You can share documents from your own domain, such as files.yourbrand.com, so links feel professional and on-brand."
+      },
+      {
+        "question": "Is my data secure?",
+        "answer": "Absolutely. All documents are encrypted using industry-standard security. You can protect access with passwords, expiry dates, or view limits."
+      },
+      {
+        "question": "Can I automate follow-ups?",
+        "answer": "Yes. You can set automated reminders and WhatsApp/Gmail triggers based on events like 'client viewed the document', 'no response after X days', or lead stage changes."
+      },
+      {
+        "question": "Who is inShare built for?",
+        "answer": "inShare is perfect for agencies, real estate, consultants, coaches, freelancers, SMBs, and corporate sales teams—anyone who sends documents to close deals."
+      },
+      {
+        "question": "Do you offer a custom plan?",
+        "answer": "Yes. If your business needs custom storage, advanced branding, or specific team features, we can build a custom plan around your requirements."
+      },
+      {
+        "question": "Do I need to install any scripts?",
+        "answer": "No. Our AI-powered web insights work without any external scripts or trackers, so you stay privacy-friendly and compliant."
+      },
+      {
+        "question": "Can I track downloads?",
+        "answer": "Yes. You can enable or disable downloads for each file and track every download event in your analytics."
+      }
+    ]
   },
   "contact": {
     "headline": "Get in Touch",

@@ -5,6 +5,7 @@ import Features from './components/Features';
 import HowItWorks from './components/HowItWorks';
 import AIInsights from './components/AIInsights';
 import Pricing from './components/Pricing';
+import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -18,6 +19,7 @@ function App() {
       <HowItWorks />
       <AIInsights />
       <Pricing />
+      <FAQ />
       <Contact />
       <Footer />
     </div>
