@@ -1,0 +1,20 @@
+{
+  "routes": [
+    {
+      "route": "/sitemap.xml",
+      "rewrite": "/sitemap.xml"
+    },
+    {
+      "route": "/robots.txt",
+      "rewrite": "/robots.txt"
+    }
+  ],
+  "mimeTypes": {
+    ".xml": "application/xml",
+    ".txt": "text/plain"
+  },
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": ["/sitemap.xml", "/robots.txt", "/favicon.ico", "/og_image.png", "*.{css,scss,js,png,gif,ico,jpg,svg}"]
+  }
+}
