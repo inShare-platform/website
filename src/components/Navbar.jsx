@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import siteContent from '../data/siteContent.json';
 
@@ -12,38 +13,45 @@ const Navbar = () => {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <a href="#home" className="flex items-center gap-2 text-white">
+            <Link to="/" className="flex items-center gap-2 text-white">
               <div className="flex items-center gap-px">
                 <span className="h-6 w-2 bg-white"></span>
                 <span className="h-6 w-2 bg-gray-300"></span>
                 <span className="h-6 w-2 bg-accent"></span>
               </div>
               <span className="text-2xl font-bold tracking-wider">{brandName}</span>
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             {navbar.map((item, index) => (
-              <a
-                key={index}
-                href={item.link}
-                className="text-white/70 hover:text-white text-sm font-bold transition-colors"
-              >
-                {item.label}
-              </a>
+              item.link.startsWith('#') ? (
+                <a
+                  key={index}
+                  href={item.link}
+                  className="text-white/70 hover:text-white text-sm font-bold transition-colors"
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <Link
+                  key={index}
+                  to={item.link}
+                  className="text-white/70 hover:text-white text-sm font-bold transition-colors"
+                >
+                  {item.label}
+                </Link>
+              )
             ))}
+            <Link
+              to="/request-demo"
+              className="px-6 py-2 bg-accent hover:bg-accent/90 text-white font-bold rounded-lg transition-all duration-300 shadow-lg shadow-accent/20 hover:shadow-accent/40"
+            >
+              Request Demo
+            </Link>
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden md:flex items-center">
-            <a
-              href="/dashboard"
-              className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-accent text-primary text-sm font-bold leading-normal tracking-[0.015em] hover:bg-accent/80 transition-colors"
-            >
-              <span className="truncate">Get Started Free</span>
-            </a>
-          </div>
 
           {/* Mobile Menu Button */}
           <button
@@ -54,29 +62,41 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-white/10">
-            <nav className="flex flex-col gap-4">
-              {navbar.map((item, index) => (
-                <a
-                  key={index}
-                  href={item.link}
-                  className="text-white/70 hover:text-white text-sm font-bold transition-colors"
+          {/* Mobile Menu */}
+          {isMenuOpen && (
+            <div className="md:hidden py-4 border-t border-white/10">
+              <nav className="flex flex-col gap-4">
+                {navbar.map((item, index) => (
+                  item.link.startsWith('#') ? (
+                    <a
+                      key={index}
+                      href={item.link}
+                      className="text-white/70 hover:text-white text-sm font-bold transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {item.label}
+                    </a>
+                  ) : (
+                    <Link
+                      key={index}
+                      to={item.link}
+                      className="text-white/70 hover:text-white text-sm font-bold transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
+                  )
+                ))}
+                <Link
+                  to="/request-demo"
+                  className="px-6 py-2 bg-accent hover:bg-accent/90 text-white font-bold rounded-lg transition-all duration-300 text-center"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  {item.label}
-                </a>
-              ))}
-              <a
-                href="/dashboard"
-                className="flex items-center justify-center rounded-lg h-10 px-4 bg-accent text-primary text-sm font-bold hover:bg-accent/80 transition-colors mt-2"
-              >
-                Get Started Free
-              </a>
-            </nav>
-          </div>
-        )}
+                  Request Demo
+                </Link>
+              </nav>
+            </div>
+          )}
       </div>
     </header>
   );

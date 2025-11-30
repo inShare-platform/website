@@ -61,125 +61,95 @@ const Problems = () => {
             </span>
           </div>
           <h1 className="text-white tracking-tight text-[32px] font-bold leading-tight md:text-5xl max-w-[800px]">
-            Traditional File Sharing Is Costing You Revenue
+            AI Digital Marketing & AI Marketing Automation Challenges Costing You Revenue
           </h1>
           <p className="text-white/70 text-lg font-normal leading-relaxed max-w-[700px]">
-            Every day, businesses lose potential deals due to lack of visibility, missed follow-ups, and unprofessional document sharing. Here's how inShare solves these critical challenges.
+            Businesses struggle with AI digital marketing implementation, AI marketing automation complexity, and AI in digital marketing strategy. Here's how inShare's unified platform solves these critical challenges.
           </p>
         </div>
 
-        <div className="space-y-12 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
           {problems.map((item, index) => (
             <div
               key={item.id}
-              className={`relative grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch ${
-                index !== problems.length - 1 ? 'pb-12 border-b border-white/5' : ''
-              }`}
+              className="relative flex flex-col gap-4 rounded-xl border-2 border-white/10 bg-gradient-to-br from-white/5 to-white/10 p-6 hover:border-accent/40 hover:shadow-xl hover:shadow-accent/10 hover:-translate-y-1 transition-all duration-300 backdrop-blur-sm group cursor-pointer"
               style={{ 
-                animation: `slideInUp 0.8s ease-out ${index * 0.2}s both`,
+                animation: `slideInUp 0.6s ease-out ${index * 0.1}s both`,
               }}
             >
-              {/* Connecting SVG Arrow between cards - animated */}
-              <div className="hidden lg:block absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0 animate-pulse-slow">
-                <svg width="60" height="60" viewBox="0 0 60 60" className="opacity-30">
-                  <path
-                    d="M10 30 L50 30 M50 30 L40 20 M50 30 L40 40"
-                    stroke="#00BCD4"
-                    strokeWidth="2"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
+              {/* Decorative corner accent */}
+              <div className="absolute top-0 right-0 w-12 h-12 opacity-10 group-hover:opacity-20 transition-opacity duration-300">
+                <svg viewBox="0 0 100 100" className="w-full h-full">
+                  <path d="M100,0 L100,100 L0,100 Z" fill="#00BCD4" />
                 </svg>
               </div>
 
-              {/* Problem Card - Enhanced hover animations */}
-              <div className="relative flex flex-col gap-5 rounded-2xl border-2 border-red-500/20 bg-gradient-to-br from-red-500/5 to-red-500/10 p-8 hover:border-red-500/40 hover:shadow-2xl hover:shadow-red-500/20 hover:-translate-y-2 hover:scale-[1.02] transition-all duration-500 backdrop-blur-sm group cursor-pointer">
-                {/* Decorative corner SVG - animated on hover */}
-                <svg className="absolute top-0 right-0 w-16 h-16 opacity-10 group-hover:opacity-30 group-hover:scale-110 transition-all duration-500" viewBox="0 0 100 100">
-                  <path d="M100,0 L100,100 L0,100 Z" fill="#ef4444" />
-                </svg>
-
-                {/* Animated ring on hover */}
-                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <div className="absolute inset-0 rounded-2xl border-2 border-red-400 animate-ping-slow"></div>
+              {/* Challenge Header */}
+              <div className="flex items-center gap-2 mb-3">
+                <div className="p-1.5 bg-red-500/10 rounded-lg group-hover:bg-red-500/20 transition-all duration-300">
+                  <AlertCircle className="w-4 h-4 text-red-400" />
                 </div>
-
-                <div className="flex items-center gap-3 mb-2 transform group-hover:translate-x-2 transition-transform duration-300">
-                  <div className="p-2 bg-red-500/10 rounded-lg group-hover:bg-red-500/20 group-hover:scale-110 transition-all duration-300">
-                    <AlertCircle className="w-6 h-6 text-red-400 group-hover:animate-pulse" />
-                  </div>
-                  <span className="text-red-400/80 text-sm font-semibold uppercase tracking-wider">
-                    Challenge #{item.id}
-                  </span>
-                </div>
-                <h2 className="text-white text-2xl md:text-3xl font-bold leading-tight group-hover:text-red-300 transition-colors duration-300">
-                  {item.problem}
-                </h2>
-                <div className="flex-1">
-                  <p className="text-white/60 text-sm font-medium mb-3 uppercase tracking-wide">
-                    What this means for your business:
-                  </p>
-                  <ul className="space-y-3">
-                    {item.problemDetails.map((detail, idx) => (
-                      <li 
-                        key={idx} 
-                        className="flex items-start gap-3 text-white/70 text-base leading-relaxed transform group-hover:translate-x-1 transition-transform duration-300"
-                        style={{ transitionDelay: `${idx * 50}ms` }}
-                      >
-                        <span className="text-red-400 mt-1 font-bold">×</span>
-                        <span>{detail}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                <span className="text-red-400/80 text-xs font-semibold uppercase tracking-wider">
+                  Challenge #{item.id}
+                </span>
               </div>
 
-              {/* Solution Card - Enhanced hover animations */}
-              <div className="relative flex flex-col gap-5 rounded-2xl border-2 border-accent/20 bg-gradient-to-br from-accent/5 to-green-500/10 p-8 hover:border-accent/40 hover:shadow-2xl hover:shadow-accent/20 hover:-translate-y-2 hover:scale-[1.02] transition-all duration-500 backdrop-blur-sm group cursor-pointer">
-                {/* Decorative corner SVG - animated on hover */}
-                <svg className="absolute top-0 left-0 w-16 h-16 opacity-10 group-hover:opacity-30 group-hover:scale-110 transition-all duration-500" viewBox="0 0 100 100">
-                  <path d="M0,0 L100,0 L0,100 Z" fill="#00BCD4" />
+              {/* Problem Title */}
+              <h3 className="text-white text-lg font-bold leading-tight mb-3 group-hover:text-accent transition-colors duration-300">
+                {item.problem}
+              </h3>
+
+              {/* Problem Details - Compact */}
+              <div className="mb-4 pb-4 border-b border-white/10">
+                <p className="text-white/50 text-xs font-medium mb-2 uppercase tracking-wide">
+                  Impact:
+                </p>
+                <ul className="space-y-2">
+                  {item.problemDetails.slice(0, 2).map((detail, idx) => (
+                    <li 
+                      key={idx} 
+                      className="flex items-start gap-2 text-white/60 text-sm leading-snug"
+                    >
+                      <span className="text-red-400 mt-0.5 text-xs">×</span>
+                      <span className="line-clamp-2">{detail}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Solution Section */}
+              <div className="flex items-center gap-2 mb-2">
+                <div className="p-1.5 bg-accent/10 rounded-lg group-hover:bg-accent/20 transition-all duration-300">
+                  <CheckCircle className="w-4 h-4 text-accent" />
+                </div>
+                <span className="text-accent/80 text-xs font-semibold uppercase tracking-wider">
+                  Solution
+                </span>
+              </div>
+
+              {/* Solution Title */}
+              <h4 className="text-white text-base font-semibold leading-tight mb-3">
+                {item.solution}
+              </h4>
+
+              {/* Solution Features - Compact */}
+              <ul className="space-y-2">
+                {item.solutionFeatures.slice(0, 2).map((feature, idx) => (
+                  <li 
+                    key={idx} 
+                    className="flex items-start gap-2 text-white/70 text-sm leading-snug"
+                  >
+                    <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" />
+                    <span className="line-clamp-2">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+
+              {/* Hover indicator */}
+              <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <svg className="w-5 h-5 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
-
-                {/* Checkmark pattern SVG - animated on hover */}
-                <svg className="absolute bottom-4 right-4 w-20 h-20 opacity-5 group-hover:opacity-20 group-hover:scale-125 transition-all duration-500" viewBox="0 0 100 100">
-                  <path d="M20,50 L40,70 L80,30" stroke="#10b981" strokeWidth="4" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-
-                {/* Animated ring on hover */}
-                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <div className="absolute inset-0 rounded-2xl border-2 border-accent animate-ping-slow"></div>
-                </div>
-
-                <div className="flex items-center gap-3 mb-2 transform group-hover:translate-x-2 transition-transform duration-300">
-                  <div className="p-2 bg-accent/10 rounded-lg group-hover:bg-accent/20 group-hover:scale-110 transition-all duration-300">
-                    <CheckCircle className="w-6 h-6 text-accent group-hover:animate-pulse" />
-                  </div>
-                  <span className="text-accent/80 text-sm font-semibold uppercase tracking-wider">
-                    inShare Solution
-                  </span>
-                </div>
-                <h2 className="text-white text-2xl md:text-3xl font-bold leading-tight group-hover:text-accent transition-colors duration-300">
-                  {item.solution}
-                </h2>
-                <div className="flex-1">
-                  <p className="text-white/60 text-sm font-medium mb-3 uppercase tracking-wide">
-                    How inShare helps:
-                  </p>
-                  <ul className="space-y-3">
-                    {item.solutionFeatures.map((feature, idx) => (
-                      <li 
-                        key={idx} 
-                        className="flex items-start gap-3 text-white/80 text-base leading-relaxed transform group-hover:translate-x-1 transition-transform duration-300"
-                        style={{ transitionDelay: `${idx * 50}ms` }}
-                      >
-                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1 group-hover:scale-125 transition-transform duration-300" />
-                        <span className="font-medium">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
               </div>
             </div>
           ))}

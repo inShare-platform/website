@@ -46,15 +46,6 @@ const Features = () => {
             );
           })}
         </div>
-
-        <div className="flex justify-center mt-6">
-          <a
-            href={features.cta.link}
-            className="flex min-w-[200px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-accent text-primary text-base font-bold leading-normal tracking-[0.015em] hover:bg-accent/80 transition-all hover:scale-105"
-          >
-            <span className="truncate">{features.cta.label}</span>
-          </a>
-        </div>
       </div>
     </section>
   );

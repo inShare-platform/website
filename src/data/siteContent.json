@@ -1,186 +1,233 @@
 {
   "brandName": "inShare",
   "navbar": [
-    { "label": "Home", "link": "#home" },
+    { "label": "Home", "link": "/" },
     { "label": "Features", "link": "#features" },
     { "label": "Pricing", "link": "#pricing" },
     { "label": "AI Insights", "link": "#ai-insights" },
+    { "label": "FAQ", "link": "#faq" },
+    { "label": "Blog", "link": "/blog" },
     { "label": "Contact", "link": "#contact" }
   ],
   "hero": {
-    "headline": "Share Documents Smarter, Track Engagement, and Convert Leads Effortlessly",
-    "subheadline": "Upload, share, analyze, and convert — all from one intuitive platform.",
+    "headline": "AI Digital Marketing Platform with AI Marketing Automation & AI in Digital Marketing",
+    "subheadline": "Leading AI digital marketing solution with complete AI marketing automation and AI in digital marketing capabilities. 5-in-1 platform: Full CRM + WhatsApp Automation + AI Cold Email Generator + Dynamic Form Builder + AI Chat-Based Forms. Stop using multiple tools.",
     "cta": {
-      "label": "Upload File",
-      "link": "https://wa.me/919080122084?text=Hi%2C%20I%20would%20like%20to%20upload%20a%20file%20and%20get%20started%20with%20inShare."
+      "label": "Request Demo",
+      "link": "https://wa.me/919080122084?text=Hi%2C%20I%20would%20like%20to%20request%20a%20demo%20of%20inShare."
     },
     "supportingText": [
-      "Create secure shareable links in seconds.",
-      "Track visitor activity in real-time.",
-      "Engage automatically with AI insights and follow-ups."
+      "🚀 Full CRM + WhatsApp Automation + AI Email + Dynamic Form Builder in ONE platform",
+      "🤖 AI Chat-Based Form Assistant with Dynamic Form Builder - Revolutionary form creation & filling",
+      "📊 AI digital marketing with dynamic forms, content tracker, pipeline management & AI in digital marketing"
     ]
   },
   "problems": [
     {
       "id": 1,
-      "problem": "You don't know if the client viewed your document",
+      "problem": "Businesses struggle to collect data easily from leads/clients",
       "problemDetails": [
-        "Once you send a file through Drive or email, there is zero visibility.",
-        "When the client opened it",
-        "How many times they viewed it",
-        "Whether they downloaded it",
-        "Whether they shared it"
+        "Traditional form tools are complex and difficult to set up",
+        "Data comes in scattered (Google Forms, WhatsApp, Email)",
+        "Hard to track form responses for marketing follow-ups",
+        "Manual data entry wastes hours of productivity",
+        "No integration between forms and CRM systems"
       ],
-      "solution": "Smart Document Insights",
+      "solution": "Super-Simple Dynamic Form Builder + CRM Integration",
       "solutionFeatures": [
-        "Real-time view tracking",
-        "IP/device/location analytics",
-        "View timeline",
-        "Download tracking",
-        "Auto notifications when the file is opened"
+        "Drag-and-drop form builder - create forms in minutes",
+        "Share link → client fills → data instantly enters CRM",
+        "Auto-tag leads and send automated responses",
+        "Zero manual entry - fully automated workflow",
+        "Form submission → CRM → automated follow-up (unique integration)"
       ]
     },
     {
       "id": 2,
-      "problem": "Follow-ups are missed, costing you deals",
+      "problem": "People don't know what to write in cold emails or follow-up messages",
       "problemDetails": [
-        "Businesses lose clients simply because they forget to follow up.",
-        "Most tools don't alert you when clients engage with your files."
+        "95% of businesses write poor outreach emails",
+        "Don't know how to structure first message, follow-ups, and sales nurtures",
+        "Spend hours crafting messages that get ignored",
+        "Lack consistency in follow-up sequences",
+        "Miss opportunities due to delayed or forgotten follow-ups"
       ],
-      "solution": "Auto Follow-ups + CRM",
+      "solution": "AI-Powered Cold Email Generator + Auto Follow-ups",
       "solutionFeatures": [
-        "Automatic follow-up reminders",
-        "WhatsApp integration for instant messaging",
-        "Lead capture forms",
-        "Engagement-based notifications",
-        "Manual trigger option for immediate outreach"
+        "AI generates industry-specific cold email templates",
+        "Suggests complete follow-up sequences automatically",
+        "Personalizes messages based on lead data",
+        "Auto-sends follow-ups until the lead replies",
+        "100% hands-free cold outreach - AI writes + system sends"
       ]
     },
     {
       "id": 3,
-      "problem": "Your brand marketing lacks professional impact",
+      "problem": "CRM tools are confusing, expensive, and overloaded",
       "problemDetails": [
-        "Generic file-sharing links don't reflect your brand identity.",
-        "No way to customize the viewer experience with your branding.",
-        "Missed opportunity to showcase your professionalism.",
-        "Competitors using branded solutions gain more trust."
+        "Most CRMs (HubSpot, Zoho) have too many features",
+        "Difficult for small businesses to learn and adopt",
+        "Expensive monthly plans that drain budgets",
+        "Overwhelming interfaces slow down daily work",
+        "Built for large sales teams, not small businesses"
       ],
-      "solution": "Branded Document Experience",
+      "solution": "Lightweight CRM Built for Lead Capture + Follow-up",
       "solutionFeatures": [
-        "Custom branded viewer pages",
-        "Add your logo and brand colors",
-        "Personalized welcome messages",
-        "Professional presentation that builds trust",
-        "Consistent brand experience across all shares"
+        "Simple dashboard focused on essentials: Lead tracking, Form submissions, Outreach status",
+        "Built specifically for lead capture + follow-up automation",
+        "Affordable SaaS model designed for small businesses",
+        "Easy to learn - start in minutes, not weeks",
+        "No overloaded features - just what you need to convert leads"
       ]
     },
     {
       "id": 4,
-      "problem": "Security concerns put your business at risk",
+      "problem": "Marketing analytics are scattered across platforms",
       "problemDetails": [
-        "Sensitive documents shared without proper protection.",
-        "No control over who accesses or downloads your files.",
-        "Compliance requirements not met.",
-        "Risk of unauthorized sharing and data leaks."
+        "Businesses juggle Google Sheets, Email tools, Form builders, and separate CRMs",
+        "No single dashboard shows lead flow and email performance",
+        "Difficult to track conversion rates across channels",
+        "Manual reporting wastes time and creates errors",
+        "Can't see the complete customer journey in one place"
       ],
-      "solution": "Enterprise-Grade Security",
+      "solution": "Unified Analytics Dashboard",
       "solutionFeatures": [
-        "Password protection for sensitive documents",
-        "Link expiration dates",
-        "Download restrictions and watermarks",
-        "Access logs and audit trails",
-        "End-to-end encryption"
+        "Single dashboard for all marketing metrics",
+        "Track lead flow, email performance, and conversions in one place",
+        "Real-time analytics on form submissions and engagement",
+        "AI-powered insights for optimization",
+        "Complete customer journey visibility from first touch to conversion"
       ]
     }
   ],
   "features": {
-    "headline": "Powerful Features to Maximize Your Document Impact",
+    "headline": "Complete AI Digital Marketing Platform with AI Marketing Automation",
     "items": [
       {
-        "title": "Secure Sharing",
-        "description": "Password-protect links, enable/disable downloads.",
+        "title": "Full CRM with Sales Pipeline",
+        "description": "Complete CRM system with lead management, contact tracking, sales pipeline management, and customer relationship management - all integrated with AI marketing automation.",
         "icon": "shield-check"
       },
       {
-        "title": "AI Assistance",
-        "description": "Get instant document summaries and insights via RAG.",
+        "title": "WhatsApp Marketing Automation",
+        "description": "Native WhatsApp integration for automated follow-ups, broadcast messages, AI-powered conversations, and customer engagement - No other CRM has this built-in.",
         "icon": "brain"
       },
       {
-        "title": "Analytics Dashboard",
-        "description": "Track visitors, engagement time, downloads, and interests.",
+        "title": "AI Cold Email + Followup Generator",
+        "description": "AI digital marketing engine that writes, personalizes, and sends cold emails automatically. AI in digital marketing creates perfect follow-up sequences based on engagement.",
         "icon": "chart-bar"
       },
       {
-        "title": "Follow-up Automation",
-        "description": "Capture leads automatically and send WhatsApp follow-ups.",
+        "title": "Dynamic Form Builder + AI Chat Assistant (UNIQUE)",
+        "description": "Create custom forms with our drag-and-drop dynamic form builder. Revolutionary AI form filling: Customers chat with AI, AI extracts data, auto-submits forms. Next-generation lead capture that converts 3x better.",
         "icon": "message-circle"
       },
       {
-        "title": "Customizable Experience",
-        "description": "Enable screenshot, search, interest form, expiration, and more per link.",
+        "title": "Content Marketing Tracker",
+        "description": "Track who views your documents, proposals, and content. Real-time analytics on engagement, downloads, and viewer behavior with AI-powered insights.",
         "icon": "settings"
       },
       {
-        "title": "Popular Search & Keywords",
-        "description": "See what your audience is looking for.",
+        "title": "Unified AI Revenue Engine",
+        "description": "All tools work together: CRM triggers WhatsApp → AI emails follow up → AI forms capture data → Content tracker monitors engagement. ONE unified AI marketing automation workflow.",
         "icon": "search"
       }
-    ],
-    "cta": {
-      "label": "Create Your First Link",
-      "link": "https://wa.me/919080122084?text=Hi%2C%20I%20would%20like%20to%20create%20my%20first%20link%20with%20inShare."
-    }
+    ]
+  },
+  "whyChooseUs": {
+    "headline": "Why Choose inShare's AI Digital Marketing Platform?",
+    "subheadline": "We're the only platform combining AI marketing automation, AI in digital marketing, and complete CRM in one system",
+    "reasons": [
+      {
+        "title": "All-in-One AI Digital Marketing Solution",
+        "description": "Stop juggling 5+ tools. Get CRM system, dynamic form builder, AI cold email generator, WhatsApp marketing automation, and content tracker unified in ONE AI digital marketing platform.",
+        "icon": "layers"
+      },
+      {
+        "title": "AI Marketing Automation That Actually Works",
+        "description": "AI in digital marketing that writes your emails, sends follow-ups automatically, and optimizes campaigns based on engagement. 100% hands-free AI marketing automation.",
+        "icon": "zap"
+      },
+      {
+        "title": "Built for Small Business, Not Enterprise",
+        "description": "Unlike expensive CRM platforms (HubSpot, Zoho), our AI digital marketing platform is simple, affordable, and designed for teams without technical expertise.",
+        "icon": "users"
+      },
+      {
+        "title": "Revolutionary AI Chat Forms",
+        "description": "Unique dynamic form builder with AI chat assistant. Leads have conversations, AI extracts data automatically - converting 3x better than traditional forms.",
+        "icon": "message-square"
+      },
+      {
+        "title": "WhatsApp Integration Built-In",
+        "description": "Native WhatsApp marketing automation triggers personalized messages when leads engage. No other AI digital marketing platform offers this level of WhatsApp CRM integration.",
+        "icon": "smartphone"
+      },
+      {
+        "title": "Affordable & Transparent Pricing",
+        "description": "Start at ₹99/month with full CRM system and AI marketing automation. No hidden fees, no complex pricing tiers. AI in digital marketing made accessible for everyone.",
+        "icon": "dollar-sign"
+      }
+    ]
   },
   "howItWorks": {
-    "headline": "How It Works",
+    "headline": "Your Simplified AI Digital Marketing Agent - 5 Steps to Revenue",
     "steps": [
       {
         "step": 1,
-        "title": "Upload & Create Link",
-        "description": "Upload your document, choose features.",
+        "title": "Collect Leads",
+        "description": "Dynamic form builder captures leads from any channel. AI chat assistant makes form filling conversational. All data flows directly into your CRM automatically.",
         "icon": "upload"
       },
       {
         "step": 2,
-        "title": "Share & Track",
-        "description": "Share the link; see analytics.",
+        "title": "AI Writes Messages",
+        "description": "AI digital marketing engine generates personalized cold emails and follow-up sequences. No more staring at blank screens - AI crafts perfect outreach messages instantly.",
         "icon": "share-2"
       },
       {
         "step": 3,
-        "title": "Engage Automatically",
-        "description": "AI summary for viewers; interest forms capture leads.",
+        "title": "Automatic Follow-ups",
+        "description": "AI marketing automation sends follow-ups until leads respond. WhatsApp integration, email sequences, and reminder workflows run hands-free. Never miss a follow-up again.",
         "icon": "zap"
       },
       {
         "step": 4,
-        "title": "Follow-up & Convert",
-        "description": "Automated WhatsApp follow-ups; admin can manually trigger messages anytime.",
+        "title": "Track Everything in CRM",
+        "description": "AI in digital marketing analytics tracks every interaction, email opened, form submitted, and deal progress. One unified dashboard shows your complete revenue pipeline.",
         "icon": "check-circle"
+      },
+      {
+        "step": 5,
+        "title": "AI Schedules Meetings Automatically",
+        "description": "AI agent detects high-intent leads and automatically schedules meetings. Smart calendar integration finds optimal meeting times, sends invites, and follows up. Convert hot leads to customers with zero manual scheduling.",
+        "icon": "calendar"
       }
     ]
   },
   "aiInsights": {
-    "headline": "AI-Powered Document Insights",
+    "headline": "AI Digital Marketing Intelligence with AI Marketing Automation",
     "content": [
-      "Summarizes documents automatically.",
-      "Highlights popular content within the doc.",
-      "Suggests next steps to maximize engagement.",
-      "RAG-powered chatbot answers questions about your document instantly."
+      "AI digital marketing analyzes every customer interaction in real-time, providing predictive lead scoring and personalized content recommendations automatically.",
+      "AI marketing automation continuously learns from engagement patterns, optimizing your campaigns and follow-up sequences without manual intervention.",
+      "AI in digital marketing powers intelligent insights across all channels - email opens, form submissions, content views, and WhatsApp conversations in one dashboard.",
+      "Complete AI digital marketing platform with AI marketing automation that writes messages, sends follow-ups, and tracks conversions automatically using AI in digital marketing."
     ],
     "demo": {
-      "title": "AI Analysis Demo",
+      "title": "AI Digital Marketing Analysis Demo",
       "lines": [
-        "> Analyzing document: \"Q4_Sales_Proposal.pdf\"",
-        "> User: alex@examplecorp.com",
-        "> Engagement Score: 87% (High)",
-        "> Generating insights...",
+        "> AI Digital Marketing Engine Analyzing...",
+        "> Document: \"Q4_Sales_Proposal.pdf\"",
+        "> Lead: alex@examplecorp.com",
+        "> Engagement Score: 87% (High Interest)",
+        "> AI Marketing Automation Processing...",
         "> ...",
-        "> [Predictive Lead Score]: 92 - Hot Lead 🔥",
-        "> [Key Interest]: Page 5-7 (Pricing Section)",
-        "> [Recommended Action]: Schedule follow-up call within 24 hours.",
-        "> AI analysis complete."
+        "> [AI Lead Score]: 92/100 - Hot Lead 🔥",
+        "> [AI Insight]: High interest in Pricing (Pages 5-7)",
+        "> [AI Recommendation]: Auto-schedule follow-up call within 24h",
+        "> [AI Action]: Sending personalized follow-up email now...",
+        "> AI in Digital Marketing - Analysis Complete ✓"
       ]
     }
   },
@@ -254,47 +301,47 @@
   },
   "faq": {
     "headline": "Frequently Asked Questions",
-    "subheadline": "Everything you need to know about inShare",
+    "subheadline": "Everything you need to know about our AI Digital Marketing Platform",
     "questions": [
       {
-        "question": "What is inShare?",
-        "answer": "inShare is a secure document sharing and analytics platform with branding, follow-ups, AI insights, and CRM features—designed for businesses that want more control than Google Drive or Dropbox offer."
+        "question": "What is inShare's AI digital marketing platform?",
+        "answer": "inShare is a complete AI digital marketing platform with AI marketing automation and AI in digital marketing capabilities. It combines CRM system, dynamic form builder, WhatsApp marketing automation, AI cold email generator, and content tracker in one unified platform - everything you need for lead generation and sales automation."
       },
       {
-        "question": "How is inShare different from Google Drive or Dropbox?",
-        "answer": "Unlike traditional storage tools, inShare provides view tracking, link analytics, branding with your domain, automatic follow-ups, and web intelligence without scripts—features that Drive/Dropbox don't offer."
+        "question": "How does AI marketing automation work in inShare?",
+        "answer": "Our AI marketing automation learns from your campaigns and automatically optimizes follow-up sequences. AI in digital marketing analyzes engagement patterns, writes personalized messages, and sends follow-ups until leads respond. The system handles cold email outreach, WhatsApp messages, and reminder emails completely hands-free."
       },
       {
-        "question": "Does inShare show who viewed my document?",
-        "answer": "Yes. You can see view count, unique visitors, IP and location, device and browser, and precise view timestamps for each document."
+        "question": "Do I need technical skills to use the AI digital marketing features?",
+        "answer": "No. Our AI digital marketing platform is designed for small businesses without technical teams. The dynamic form builder uses drag-and-drop, AI writes your emails automatically, and the CRM system is simple to learn. Everything works together seamlessly with AI marketing automation handling the complex tasks."
       },
       {
-        "question": "Can I add my own domain?",
-        "answer": "Yes. You can share documents from your own domain, such as files.yourbrand.com, so links feel professional and on-brand."
+        "question": "Is inShare a free CRM with AI capabilities?",
+        "answer": "We offer affordable plans starting at ₹99/month with full CRM system features. Unlike expensive CRM platforms like HubSpot, our customer relationship management system is lightweight, built specifically for lead capture and AI marketing automation. You get AI in digital marketing, WhatsApp integration, and dynamic forms without the complexity."
       },
       {
-        "question": "Is my data secure?",
-        "answer": "Absolutely. All documents are encrypted using industry-standard security. You can protect access with passwords, expiry dates, or view limits."
+        "question": "What makes your dynamic form builder unique?",
+        "answer": "Our dynamic form builder has an AI chat assistant that makes form filling conversational. Leads chat with AI, and the system extracts data automatically. Forms integrate directly with our CRM system, triggering AI marketing automation workflows for instant follow-ups - a unique combination no other form tool offers."
       },
       {
-        "question": "Can I automate follow-ups?",
-        "answer": "Yes. You can set automated reminders and WhatsApp/Gmail triggers based on events like 'client viewed the document', 'no response after X days', or lead stage changes."
+        "question": "Can the AI write cold emails for me?",
+        "answer": "Yes. Our AI digital marketing engine generates industry-specific cold email templates and complete follow-up sequences. AI in digital marketing personalizes each message based on lead data and engagement. The AI marketing automation then sends these messages and tracks responses automatically."
       },
       {
-        "question": "Who is inShare built for?",
-        "answer": "inShare is perfect for agencies, real estate, consultants, coaches, freelancers, SMBs, and corporate sales teams—anyone who sends documents to close deals."
+        "question": "How does WhatsApp marketing automation work?",
+        "answer": "Native WhatsApp integration is built into our CRM system. When leads engage with forms or content, AI marketing automation triggers personalized WhatsApp messages. You can send broadcast messages, automated follow-ups, and reminders - all managed through our AI digital marketing platform."
       },
       {
-        "question": "Do you offer a custom plan?",
-        "answer": "Yes. If your business needs custom storage, advanced branding, or specific team features, we can build a custom plan around your requirements."
+        "question": "Do I get analytics for my AI marketing automation?",
+        "answer": "Yes. Our AI in digital marketing provides unified analytics across all channels. Track email opens, form submissions, content views, WhatsApp conversations, and lead scoring in one dashboard. The CRM system shows your complete customer relationship management data with AI-powered insights."
       },
       {
-        "question": "Do I need to install any scripts?",
-        "answer": "No. Our AI-powered web insights work without any external scripts or trackers, so you stay privacy-friendly and compliant."
+        "question": "Is my data secure in your CRM system?",
+        "answer": "Absolutely. Our customer relationship management system uses industry-standard encryption. All data in our AI digital marketing platform is protected with passwords, expiry dates, and access controls. We're privacy-compliant and don't use external tracking scripts."
       },
       {
-        "question": "Can I track downloads?",
-        "answer": "Yes. You can enable or disable downloads for each file and track every download event in your analytics."
+        "question": "Can I try the AI digital marketing platform before committing?",
+        "answer": "Yes. Request a demo to see our AI marketing automation, dynamic form builder, CRM system, and AI in digital marketing features in action. We'll show you how the complete platform works and help you get started with lead generation and sales automation."
       }
     ]
   },

@@ -1,8 +1,10 @@
+import { useNavigate } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import siteContent from '../data/siteContent.json';
 
 const Hero = () => {
   const { hero } = siteContent;
+  const navigate = useNavigate();
 
   return (
     <section id="home" className="relative py-20 md:py-32 overflow-hidden">
@@ -50,13 +52,13 @@ const Hero = () => {
             {hero.subheadline}
           </h2>
           
-          <a
-            href={hero.cta.link}
+          <button
+            onClick={() => navigate('/request-demo')}
             className="flex mt-4 min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-12 px-6 bg-accent text-primary text-base font-bold leading-normal tracking-[0.015em] hover:bg-accent/80 transition-all hover:scale-105 animate-fade-in-delay-2 group"
           >
             <span className="truncate">{hero.cta.label}</span>
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </a>
+          </button>
 
           {/* Supporting Text */}
           <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl">

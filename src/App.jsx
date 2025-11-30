@@ -1,28 +1,28 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Problems from './components/Problems';
-import Features from './components/Features';
-import HowItWorks from './components/HowItWorks';
-import AIInsights from './components/AIInsights';
-import Pricing from './components/Pricing';
-import FAQ from './components/FAQ';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Home from './pages/Home';
+import BlogList from './pages/BlogList';
+import BlogPost from './pages/BlogPost';
+import DemoRequest from './pages/DemoRequest';
 
 function App() {
   return (
-    <div className="min-h-screen bg-background-dark">
-      <Navbar />
-      <Hero />
-      <Problems />
-      <Features />
-      <HowItWorks />
-      <AIInsights />
-      <Pricing />
-      <FAQ />
-      <Contact />
-      <Footer />
-    </div>
+    <HelmetProvider>
+      <Router>
+        <div className="min-h-screen bg-background-dark">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/blog" element={<BlogList />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/request-demo" element={<DemoRequest />} />
+          </Routes>
+          <Footer />
+        </div>
+      </Router>
+    </HelmetProvider>
   );
 }
 
