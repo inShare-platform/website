@@ -8,10 +8,14 @@ import AIInsights from '../components/AIInsights';
 import Pricing from '../components/Pricing';
 import FAQ from '../components/FAQ';
 import Contact from '../components/Contact';
+import StructuredData from '../components/StructuredData';
 
 const Home = () => {
   return (
     <>
+      <StructuredData type="organization" />
+      <StructuredData type="software" />
+      <StructuredData type="website" />
       <Helmet>
         {/* Primary Meta Tags */}
         <title>AI Digital Marketing | AI Marketing Automation | AI in Digital Marketing | inShare</title>
@@ -27,7 +31,7 @@ const Home = () => {
         <meta property="og:url" content="https://inshare.in/" />
         <meta property="og:title" content="AI Digital Marketing | AI Marketing Automation | AI in Digital Marketing" />
         <meta property="og:description" content="Complete AI digital marketing platform with AI marketing automation and AI in digital marketing. 4-in-1 solution: CRM + WhatsApp Automation + AI Email Generator + AI Chat-Based Forms." />
-        <meta property="og:image" content="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=630&fit=crop" />
+        <meta property="og:image" content="https://inshare.in/og_image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="inShare - Free CRM System for Small Business" />
@@ -39,7 +43,7 @@ const Home = () => {
         <meta name="twitter:url" content="https://inshare.in/" />
         <meta name="twitter:title" content="AI Digital Marketing | AI Marketing Automation | AI in Digital Marketing" />
         <meta name="twitter:description" content="Leading AI digital marketing platform with AI marketing automation and AI in digital marketing. Complete CRM, WhatsApp Automation, AI Email Generator & AI Chat-Based Forms." />
-        <meta name="twitter:image" content="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=630&fit=crop" />
+        <meta name="twitter:image" content="https://inshare.in/og_image.png" />
         <meta name="twitter:image:alt" content="inShare - Free CRM System for Small Business" />
         <meta name="twitter:site" content="@inshare" />
         <meta name="twitter:creator" content="@inshare" />

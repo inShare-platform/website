@@ -1,0 +1,6 @@
+# Netlify/Vercel SPA routing configuration
+# Redirect all routes to index.html for client-side routing
+/*    /index.html   200
+
+# API routes (if any in future)
+/api/*  /api/:splat  200
