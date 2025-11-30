@@ -5,14 +5,8 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   build: {
-    // Optimize output
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true
-      }
-    },
+    // Optimize output - using esbuild (faster and included with Vite)
+    minify: 'esbuild',
     // Code splitting
     rollupOptions: {
       output: {
