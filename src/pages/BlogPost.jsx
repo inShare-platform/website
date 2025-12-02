@@ -1,12 +1,21 @@
+import { useEffect } from 'react';
 import { useParams, Link, Navigate, useNavigate } from 'react-router-dom';
 import { Calendar, Clock, User, ArrowLeft, Tag } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import blogData from '../data/blogData.json';
+import { trackBlogView } from '../services/analytics';
 
 const BlogPost = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
   const post = blogData.posts.find(p => p.slug === slug);
+
+  useEffect(() => {
+    if (post) {
+      // Track blog post view
+      trackBlogView(post.title);
+    }
+  }, [post]);
 
   if (!post) {
     return <Navigate to="/blog" replace />;

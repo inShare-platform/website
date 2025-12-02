@@ -1,5 +1,6 @@
 import { CheckCircle } from 'lucide-react';
 import siteContent from '../data/siteContent.json';
+import { trackPricingClick } from '../services/analytics';
 
 const Pricing = () => {
   const { pricing } = siteContent;
@@ -52,6 +53,7 @@ const Pricing = () => {
               </ul>
               <a
                 href={plan.cta.link}
+                onClick={() => trackPricingClick(plan.name)}
                 className={`mt-4 flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 text-base font-bold transition-all ${
                   plan.popular
                     ? 'bg-accent text-primary hover:bg-accent/80'
@@ -74,6 +76,7 @@ const Pricing = () => {
           </p>
           <a
             href={pricing.customPlan.cta.link}
+            onClick={() => trackPricingClick('Custom Plan')}
             className="inline-flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-accent text-primary text-base font-bold hover:bg-accent/80 transition-all"
           >
             {pricing.customPlan.cta.label}

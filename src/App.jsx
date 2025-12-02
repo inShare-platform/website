@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import Navbar from './components/Navbar';
 import Breadcrumb from './components/Breadcrumb';
@@ -10,11 +11,32 @@ import BlogList from './pages/BlogList';
 import BlogPost from './pages/BlogPost';
 import DemoRequest from './pages/DemoRequest';
 import NotFound from './pages/NotFound';
+import { initGA, trackPageView } from './services/analytics';
+
+// Analytics wrapper component to track page views
+function AnalyticsTracker() {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Track page view on route change
+    trackPageView(location.pathname + location.search, document.title);
+  }, [location]);
+
+  return null;
+}
 
 function App() {
+  useEffect(() => {
+    // Initialize Google Analytics on app load
+    initGA();
+    // Track initial page view
+    trackPageView(window.location.pathname + window.location.search);
+  }, []);
+
   return (
     <HelmetProvider>
       <Router>
+        <AnalyticsTracker />
         <ScrollToTop />
         <div className="min-h-screen bg-background-dark">
           <Navbar />

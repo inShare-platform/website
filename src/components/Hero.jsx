@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import siteContent from '../data/siteContent.json';
+import { trackDemoRequest } from '../services/analytics';
 
 const Hero = () => {
   const { hero } = siteContent;
@@ -53,7 +54,10 @@ const Hero = () => {
           </h2>
           
           <button
-            onClick={() => navigate('/request-demo')}
+            onClick={() => {
+              trackDemoRequest('Hero Section');
+              navigate('/request-demo');
+            }}
             className="flex mt-4 min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-12 px-6 bg-accent text-primary text-base font-bold leading-normal tracking-[0.015em] hover:bg-accent/80 transition-all hover:scale-105 animate-fade-in-delay-2 group"
           >
             <span className="truncate">{hero.cta.label}</span>
