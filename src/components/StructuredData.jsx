@@ -7,7 +7,7 @@ const StructuredData = ({ type = 'organization' }) => {
     "name": "inShare",
     "alternateName": "inShare Platform",
     "url": "https://inshare.in",
-    "logo": "https://inshare.in/logo-512.png", // TODO: Add square logo (512x512px) to public folder
+    "logo": "https://inshare.in/logo-512.png",
     "description": "Leading AI digital marketing platform with complete AI marketing automation, CRM, WhatsApp automation, and smart business tools.",
     "sameAs": [
       "https://twitter.com/inshare",
