@@ -7,6 +7,11 @@ import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import About from './pages/About';
+import Features from './pages/Features';
+import PricingPage from './pages/PricingPage';
+import AIInsightsPage from './pages/AIInsightsPage';
+import FAQPage from './pages/FAQPage';
+import ContactPage from './pages/ContactPage';
 import BlogList from './pages/BlogList';
 import BlogPost from './pages/BlogPost';
 import DemoRequest from './pages/DemoRequest';
@@ -44,6 +49,11 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/features" element={<Features />} />
+            <Route path="/pricing" element={<PricingPage />} />
+            <Route path="/ai-insights" element={<AIInsightsPage />} />
+            <Route path="/faq" element={<FAQPage />} />
+            <Route path="/contact" element={<ContactPage />} />
             <Route path="/blog" element={<BlogList />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/request-demo" element={<DemoRequest />} />

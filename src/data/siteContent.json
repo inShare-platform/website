@@ -3,12 +3,12 @@
   "navbar": [
     { "label": "Home", "link": "/" },
     { "label": "About", "link": "/about" },
-    { "label": "Features", "link": "#features" },
-    { "label": "Pricing", "link": "#pricing" },
-    { "label": "AI Insights", "link": "#ai-insights" },
-    { "label": "FAQ", "link": "#faq" },
+    { "label": "Features", "link": "/features" },
+    { "label": "Pricing", "link": "/pricing" },
+    { "label": "AI Insights", "link": "/ai-insights" },
+    { "label": "FAQ", "link": "/faq" },
     { "label": "Blog", "link": "/blog" },
-    { "label": "Contact", "link": "#contact" }
+    { "label": "Contact", "link": "/contact" }
   ],
   "hero": {
     "headline": "AI Digital Marketing Platform with AI Marketing Automation & AI in Digital Marketing",
