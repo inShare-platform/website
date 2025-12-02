@@ -74,18 +74,32 @@
     <!-- Performance & Security -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="referrer" content="origin-when-cross-origin" />
+    
+    <style>
+      /* Hide SEO content by default, show only for search engines and no-JS users */
+      #seo-content {
+        display: none;
+      }
+      
+      /* Show a loading state while React loads */
+      #root:empty::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      }
+    </style>
   </head>
   <body>
-    <div id="root">
-      <noscript style="display: none;">
+    <div id="root"></div>
+    
+    <!-- SEO Content - Hidden from users, visible to search engines -->
+    <div id="seo-content">
       <noscript>
         <h1>AI In digital marketing</h1>
         <p>Welcome to inShare - the leading AI digital marketing platform with complete AI marketing automation and AI in digital marketing capabilities.</p>
         <p>Our all-in-one platform combines CRM system, WhatsApp marketing automation, AI cold email generator, dynamic form builder, and smart document sharing in one unified solution.</p>
-        <p>Experience the power of AI marketing automation with our intelligent lead capture, automated follow-ups, and AI-powered insights. Built specifically for small businesses and marketing teams.</p>
-        <p>Key features include: Full CRM with sales pipeline management, native WhatsApp integration for automated messaging, AI-powered cold email generation, revolutionary dynamic form builder with AI chat assistant, content marketing tracker with engagement analytics, and unified AI revenue engine.</p>
-        <p>Transform your digital marketing with AI. Our AI in digital marketing platform helps you capture leads, automate sales processes, and grow your business with intelligent automation. Start tracking your marketing performance, engaging customers across channels, and closing deals faster.</p>
-        <p>Affordable pricing starts at ₹99/month with full CRM features. No complex setup required - designed for non-technical teams. Join businesses using AI digital marketing automation to scale their growth.</p>
       </noscript>
       <main style="padding: 2rem; max-width: 1200px; margin: 0 auto;">
         <header>
@@ -148,8 +162,8 @@
           <p>Start your <strong>AI digital marketing</strong> journey today. Request a demo to see our <strong>AI marketing automation</strong> platform in action.</p>
         </section>
       </main>
-      </noscript>
     </div>
+    
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
