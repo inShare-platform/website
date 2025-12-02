@@ -2,6 +2,7 @@
   "brandName": "inShare",
   "navbar": [
     { "label": "Home", "link": "/" },
+    { "label": "About", "link": "/about" },
     { "label": "Features", "link": "#features" },
     { "label": "Pricing", "link": "#pricing" },
     { "label": "AI Insights", "link": "#ai-insights" },

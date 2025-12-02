@@ -3,7 +3,9 @@ import { HelmetProvider } from 'react-helmet-async';
 import Navbar from './components/Navbar';
 import Breadcrumb from './components/Breadcrumb';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
+import About from './pages/About';
 import BlogList from './pages/BlogList';
 import BlogPost from './pages/BlogPost';
 import DemoRequest from './pages/DemoRequest';
@@ -13,11 +15,13 @@ function App() {
   return (
     <HelmetProvider>
       <Router>
+        <ScrollToTop />
         <div className="min-h-screen bg-background-dark">
           <Navbar />
           <Breadcrumb />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
             <Route path="/blog" element={<BlogList />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/request-demo" element={<DemoRequest />} />

@@ -7,8 +7,8 @@ const StructuredData = ({ type = 'organization' }) => {
     "name": "inShare",
     "alternateName": "inShare Platform",
     "url": "https://inshare.in",
-    "logo": "https://inshare.in/og_image.png",
-    "description": "AI-powered digital marketing platform with CRM, WhatsApp automation, AI email generator, and chat-based forms for businesses.",
+    "logo": "https://inshare.in/logo-512.png", // TODO: Add square logo (512x512px) to public folder
+    "description": "Leading AI digital marketing platform with complete AI marketing automation, CRM, WhatsApp automation, and smart business tools.",
     "sameAs": [
       "https://twitter.com/inshare",
       "https://facebook.com/inshare",
@@ -43,7 +43,7 @@ const StructuredData = ({ type = 'organization' }) => {
       "ratingValue": "4.8",
       "ratingCount": "150"
     },
-    "description": "Complete AI digital marketing platform with CRM, WhatsApp Automation, AI Cold Email Generator, and AI Chat-Based Forms.",
+    "description": "Leading AI digital marketing platform with AI marketing automation, CRM system, WhatsApp automation, AI email generator, and smart forms for modern businesses.",
     "featureList": [
       "CRM System",
       "WhatsApp Automation",
