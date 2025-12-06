@@ -72,7 +72,7 @@ const DemoRequest = () => {
     
     try {
       // Call the API endpoint
-      const response = await fetch('https://api.inshare.in/api/v1/lead', {
+      const response = await fetch('https://insharecoreservices.fly.dev/api/v1/lead', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
