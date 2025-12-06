@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { X } from 'lucide-react';
+import SuccessModal from './SuccessModal';
 
 const DemoModal = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({
@@ -11,6 +12,9 @@ const DemoModal = ({ isOpen, onClose }) => {
 
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null); // 'success' or 'error'
+  const [submitMessage, setSubmitMessage] = useState('');
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -63,31 +67,61 @@ const DemoModal = ({ isOpen, onClose }) => {
     }
 
     setIsSubmitting(true);
+    setSubmitStatus(null);
+    setSubmitMessage('');
     
-    // Create WhatsApp message
-    const message = `*Demo Request*\n\n*Name:* ${formData.name}\n*Email:* ${formData.email}\n*Phone:* ${formData.phone}\n*Comments:* ${formData.comments}`;
-    const whatsappUrl = `https://wa.me/919080122084?text=${encodeURIComponent(message)}`;
-    
-    // Open WhatsApp in new tab
-    window.open(whatsappUrl, '_blank');
-    
-    // Reset form and close modal
-    setTimeout(() => {
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        comments: ''
+    try {
+      // Call the API endpoint
+      const response = await fetch('https://api.inshare.in/api/v1/lead', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          fullName: formData.name,
+          emailAddress: formData.email,
+          phoneNumber: formData.phone,
+          comments: formData.comments
+        })
       });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        // Success - close this modal and show success modal
+        setIsSubmitting(false);
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          comments: ''
+        });
+        onClose();
+        setShowSuccessModal(true);
+      } else {
+        // API returned an error
+        setSubmitStatus('error');
+        setSubmitMessage(data.error || 'Failed to submit your request. Please try again.');
+        setIsSubmitting(false);
+      }
+    } catch (error) {
+      // Network or other error
+      setSubmitStatus('error');
+      setSubmitMessage('Network error. Please check your connection and try again.');
       setIsSubmitting(false);
-      onClose();
-    }, 1000);
+    }
   };
 
-  if (!isOpen) return null;
+  if (!isOpen) return (
+    <SuccessModal 
+      isOpen={showSuccessModal} 
+      onClose={() => setShowSuccessModal(false)} 
+    />
+  );
 
   return (
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4">
+    <>
+      <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4">
       {/* Backdrop */}
       <div 
         className="absolute inset-0 bg-black/80 backdrop-blur-md"
@@ -193,6 +227,25 @@ const DemoModal = ({ isOpen, onClose }) => {
             )}
           </div>
 
+          {/* Status Message */}
+          {submitStatus && (
+            <div
+              className={`p-4 rounded-lg ${
+                submitStatus === 'success'
+                  ? 'bg-green-500/20 border border-green-500/50'
+                  : 'bg-red-500/20 border border-red-500/50'
+              }`}
+            >
+              <p
+                className={`text-sm font-medium ${
+                  submitStatus === 'success' ? 'text-green-400' : 'text-red-400'
+                }`}
+              >
+                {submitMessage}
+              </p>
+            </div>
+          )}
+
           {/* Submit Button */}
           <button
             type="submit"
@@ -211,7 +264,13 @@ const DemoModal = ({ isOpen, onClose }) => {
           </p>
         </form>
       </div>
-    </div>
+      </div>
+      
+      <SuccessModal 
+        isOpen={showSuccessModal} 
+        onClose={() => setShowSuccessModal(false)} 
+      />
+    </>
   );
 };
 

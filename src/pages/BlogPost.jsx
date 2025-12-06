@@ -25,6 +25,82 @@ const BlogPost = () => {
     .filter(p => p.id !== post.id && (p.category === post.category || p.tags.some(tag => post.tags.includes(tag))))
     .slice(0, 3);
 
+  // Function to convert markdown to HTML with proper heading tags
+  const formatContent = (content) => {
+    const lines = content.split('\n');
+    const formatted = [];
+    
+    // Helper function to process inline **bold** text
+    const processBoldText = (text) => {
+      const parts = [];
+      let lastIndex = 0;
+      const boldRegex = /\*\*(.*?)\*\*/g;
+      let match;
+      
+      while ((match = boldRegex.exec(text)) !== null) {
+        // Add text before bold
+        if (match.index > lastIndex) {
+          parts.push(text.substring(lastIndex, match.index));
+        }
+        // Add bold text
+        parts.push(
+          <strong key={match.index} className="text-white font-bold">
+            {match[1]}
+          </strong>
+        );
+        lastIndex = match.index + match[0].length;
+      }
+      
+      // Add remaining text
+      if (lastIndex < text.length) {
+        parts.push(text.substring(lastIndex));
+      }
+      
+      return parts.length > 0 ? parts : text;
+    };
+    
+    lines.forEach((line, index) => {
+      // Convert ## headings to h1
+      if (line.startsWith('## ')) {
+        formatted.push(
+          <h1 key={index} className="text-white text-3xl font-bold mt-12 mb-6 first:mt-0">
+            {line.replace('## ', '')}
+          </h1>
+        );
+      }
+      // Convert ### headings to h1
+      else if (line.startsWith('### ')) {
+        formatted.push(
+          <h1 key={index} className="text-white text-2xl font-bold mt-8 mb-4">
+            {line.replace('### ', '')}
+          </h1>
+        );
+      }
+      // Standalone **bold** line
+      else if (line.trim().startsWith('**') && line.trim().endsWith('**') && !line.includes(':')) {
+        formatted.push(
+          <p key={index} className="text-white font-bold text-xl mt-6 mb-3">
+            {line.replace(/\*\*/g, '')}
+          </p>
+        );
+      }
+      // Regular paragraphs (may contain inline **bold**)
+      else if (line.trim() !== '') {
+        formatted.push(
+          <p key={index} className="text-white/80 leading-relaxed text-lg mb-4">
+            {processBoldText(line)}
+          </p>
+        );
+      }
+      // Empty lines for spacing
+      else {
+        formatted.push(<div key={index} className="h-2" />);
+      }
+    });
+    
+    return formatted;
+  };
+
   return (
     <>
       <Helmet>
@@ -42,7 +118,7 @@ const BlogPost = () => {
       </Helmet>
 
       <div className="min-h-screen bg-background-dark py-20">
-        <div className="container mx-auto px-4 max-w-4xl">
+        <div className="container mx-auto px-4">
           {/* Back Button */}
           <Link
             to="/blog"
@@ -99,10 +175,8 @@ const BlogPost = () => {
             </div>
 
             {/* Content */}
-            <div className="prose prose-invert prose-lg max-w-none mb-12">
-              <p className="text-white/80 leading-relaxed text-lg whitespace-pre-line">
-                {post.content}
-              </p>
+            <div className="max-w-none mb-12">
+              {formatContent(post.content)}
             </div>
 
             {/* Tags */}

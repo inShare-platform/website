@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { ArrowLeft, CheckCircle } from 'lucide-react';
+import SuccessModal from '../components/SuccessModal';
 
 const DemoRequest = () => {
   const navigate = useNavigate();
@@ -14,7 +15,8 @@ const DemoRequest = () => {
 
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -66,31 +68,45 @@ const DemoRequest = () => {
     }
 
     setIsSubmitting(true);
+    setSubmitError('');
     
-    // Create WhatsApp message
-    const message = `*Demo Request*\n\n*Name:* ${formData.name}\n*Email:* ${formData.email}\n*Phone:* ${formData.phone}\n*Comments:* ${formData.comments}`;
-    const whatsappUrl = `https://wa.me/919080122084?text=${encodeURIComponent(message)}`;
-    
-    // Open WhatsApp in new tab
-    window.open(whatsappUrl, '_blank');
-    
-    // Show success state
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSuccess(true);
-      
-      // Reset form after 3 seconds and redirect
-      setTimeout(() => {
+    try {
+      // Call the API endpoint
+      const response = await fetch('https://api.inshare.in/api/v1/lead', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          fullName: formData.name,
+          emailAddress: formData.email,
+          phoneNumber: formData.phone,
+          comments: formData.comments
+        })
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        // Success - show success modal
+        setIsSubmitting(false);
         setFormData({
           name: '',
           email: '',
           phone: '',
           comments: ''
         });
-        setIsSuccess(false);
-        navigate('/');
-      }, 3000);
-    }, 1000);
+        setShowSuccessModal(true);
+      } else {
+        // API returned an error
+        setSubmitError(data.error || 'Failed to submit your request. Please try again.');
+        setIsSubmitting(false);
+      }
+    } catch (error) {
+      // Network or other error
+      setSubmitError('Network error. Please check your connection and try again.');
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -156,17 +172,7 @@ const DemoRequest = () => {
 
             {/* Right Column - Form */}
             <div className="bg-primary/30 rounded-lg p-8 border border-white/10">
-              {isSuccess ? (
-                <div className="text-center py-12">
-                  <CheckCircle className="w-16 h-16 text-accent mx-auto mb-4" />
-                  <h2 className="text-white text-2xl font-bold mb-2">Request Submitted!</h2>
-                  <p className="text-white/70 mb-4">
-                    We've received your demo request and will contact you shortly via WhatsApp.
-                  </p>
-                  <p className="text-white/50 text-sm">Redirecting to home...</p>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-5">
+              <form onSubmit={handleSubmit} className="space-y-5">
                   <h2 className="text-white text-2xl font-bold mb-6">Get Started</h2>
 
                   {/* Name */}
@@ -253,6 +259,15 @@ const DemoRequest = () => {
                     )}
                   </div>
 
+                  {/* Error Message */}
+                  {submitError && (
+                    <div className="p-4 rounded-lg bg-red-500/20 border border-red-500/50">
+                      <p className="text-sm font-medium text-red-400">
+                        {submitError}
+                      </p>
+                    </div>
+                  )}
+
                   {/* Submit Button */}
                   <button
                     type="submit"
@@ -270,11 +285,15 @@ const DemoRequest = () => {
                     All fields are required. We respect your privacy and will never share your information.
                   </p>
                 </form>
-              )}
             </div>
           </div>
         </div>
       </div>
+      
+      <SuccessModal 
+        isOpen={showSuccessModal} 
+        onClose={() => setShowSuccessModal(false)} 
+      />
     </>
   );
 };
